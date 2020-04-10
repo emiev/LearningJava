@@ -14,7 +14,9 @@ public class DotComBust {
         dotComList.add(a);
         dotComList.add(b);
         dotComList.add(c);
-        System.out.println("AAA");
+        System.out.println("Ваша цель - потопить три 'сайта'");
+        System.out.println("Ask.com, Google.com, Amazon.com");
+        System.out.println("Попытайтесь потопить их за минимальное количество ходов");
         for(DotCom dotComToSet: dotComList) {
             ArrayList<String> newLocation = helper.placeDotCom(dotComList.size());
             dotComToSet.setLocationCells(newLocation);
@@ -41,7 +43,14 @@ public class DotComBust {
         System.out.println(result);
     }
     public void finishGame(){
-        System.out.println("asdf");
+        System.out.println("Все \"сайты\" ушли ко дну! Ваши акции теперь ничего не стоят.");
+        if (numOfGuesses <= 18) {
+            System.out.println("Это заняло у вас всего" + numOfGuesses + "попыток");
+            System.out.println("Вы успели выбраться до того, как ваши вложения утонули.");
+        } else {
+            System.out.println("Это заняло у вас довольно много времени. " + numOfGuesses + "попыток");
+            System.out.println("Рыбы водят хороводы вокруг ваших вложений");
+        }
     }
 
     public static void main(String[] args) {
