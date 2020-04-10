@@ -8,8 +8,8 @@ import java.util.ArrayList;
 
 public class GameHelper {
     private static final String alphabet = "abcdefg";
-    private int gridLength = 7, gridSize = 49;
-    private int[] grid = new int[gridSize];
+    private final int gridSize = 49;
+    private final int[] grid = new int[gridSize];
     private int comCount = 0;
 
     public String getUserInput(String promt) {
@@ -37,6 +37,7 @@ public class GameHelper {
 
         comCount++;
         int increment = 1;
+        int gridLength = 7;
         if ((comCount%2) == 1) {
             increment = gridLength;
         }
